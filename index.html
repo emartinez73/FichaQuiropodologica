@@ -3,48 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ficha Quiropodológica">
     <title>Ficha Quiropodológica</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
 </head>
 <body>
     <h1>Ficha Quiropodológica</h1>
     <form>
-        <label for="name">Nombre Completo</label>
-        <input type="text" id="name" name="name" required>
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-        <label for="dob">Fecha de Nacimiento</label>
-        <input type="date" id="dob" name="dob" required>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
 
-        <label for="gender">Sexo</label>
-        <select id="gender" name="gender" required>
-            <option value="">Seleccione</option>
-            <option value="mujer">Mujer</option>
-            <option value="hombre">Hombre</option>
-        </select>
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
 
-        <label for="conditions">¿Tiene alguna de estas condiciones?</label>
-        <div>
-            <label><input type="checkbox" name="conditions" value="diabetes"> Diabetes</label><br>
-            <label><input type="checkbox" name="conditions" value="hipertension"> Hipertensión</label><br>
-            <label><input type="checkbox" name="conditions" value="colesterol"> Colesterol alto</label>
-        </div>
+            <label>Género:</label>
+            <select name="genero" id="genero" required>
+                <option value="Mujer">Mujer</option>
+                <option value="Hombre">Hombre</option>
+            </select>
 
-        <label for="motivo">Motivo de Consulta</label>
-        <select id="motivo" name="motivo">
-            <option value="">Seleccione</option>
-            <option value="uñas">Uñas encarnadas</option>
-            <option value="onicomicosis">Onicomicosis</option>
-            <option value="sudor">Sudor excesivo</option>
-            <option value="heloma">Heloma</option>
-        </select>
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" name="peso" step="0.1">
 
-        <label for="medicamentos">Medicamentos actuales</label>
-        <textarea id="medicamentos" name="medicamentos"></textarea>
+            <label for="estatura">Estatura (cm):</label>
+            <input type="number" id="estatura" name="estatura">
+        </fieldset>
+
+        <fieldset>
+            <legend>Historial Médico</legend>
+            <p>Marque si aplica:</p>
+            <div>
+                <label><input type="checkbox" name="diabetes"> Diabetes</label>
+                <label><input type="checkbox" name="anemia"> Anemia</label>
+                <label><input type="checkbox" name="asma"> Asma</label>
+                <label><input type="checkbox" name="cancer"> Cáncer</label>
+                <label><input type="checkbox" name="epilepsia"> Epilepsia</label>
+            </div>
+            <label for="alergias">Alergias:</label>
+            <textarea id="alergias" name="alergias" rows="3"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Motivo de Consulta</legend>
+            <label for="motivo">Motivo:</label>
+            <select id="motivo" name="motivo">
+                <option value="uñas_encarnadas">Uñas Encarnadas</option>
+                <option value="onicomicosis">Onicomicosis</option>
+                <option value="heloma">Heloma</option>
+                <option value="hallux_valgus">Hallux Valgus</option>
+            </select>
+        </fieldset>
 
         <button type="submit">Enviar</button>
     </form>
-
-    <script src="sw-register.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
