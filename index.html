@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Quiropodológica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <h1>Ficha Quiropodológica</h1>
+    <form>
+        <label for="name">Nombre Completo</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="dob">Fecha de Nacimiento</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="gender">Sexo</label>
+        <select id="gender" name="gender" required>
+            <option value="">Seleccione</option>
+            <option value="mujer">Mujer</option>
+            <option value="hombre">Hombre</option>
+        </select>
+
+        <label for="conditions">¿Tiene alguna de estas condiciones?</label>
+        <div>
+            <label><input type="checkbox" name="conditions" value="diabetes"> Diabetes</label><br>
+            <label><input type="checkbox" name="conditions" value="hipertension"> Hipertensión</label><br>
+            <label><input type="checkbox" name="conditions" value="colesterol"> Colesterol alto</label>
+        </div>
+
+        <label for="motivo">Motivo de Consulta</label>
+        <select id="motivo" name="motivo">
+            <option value="">Seleccione</option>
+            <option value="uñas">Uñas encarnadas</option>
+            <option value="onicomicosis">Onicomicosis</option>
+            <option value="sudor">Sudor excesivo</option>
+            <option value="heloma">Heloma</option>
+        </select>
+
+        <label for="medicamentos">Medicamentos actuales</label>
+        <textarea id="medicamentos" name="medicamentos"></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="sw-register.js"></script>
+</body>
+</html>
